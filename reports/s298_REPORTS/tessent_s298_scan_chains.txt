@@ -1,0 +1,15 @@
+
+===============================
+Scan Chains Created by the Tool
+===============================
+
+   Scan mode 'unwrapped' scan chains:
+   ----------------------------------
+      chain = chain0   group = dummy  input = /ts_si[0]  output = /ts_so[0]  length = 2
+      chain = chain1   group = dummy  input = /ts_si[1]  output = /ts_so[1]  length = 2
+      chain = chain2   group = dummy  input = /ts_si[2]  output = /ts_so[2]  length = 2
+      chain = chain3   group = dummy  input = /ts_si[3]  output = /ts_so[3]  length = 2
+      chain = chain4   group = dummy  input = /ts_si[4]  output = /ts_so[4]  length = 2
+      chain = chain5   group = dummy  input = /ts_si[5]  output = /ts_so[5]  length = 2
+      chain = chain6   group = dummy  input = /ts_si[6]  output = /ts_so[6]  length = 2
+

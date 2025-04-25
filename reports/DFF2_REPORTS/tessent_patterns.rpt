@@ -1,0 +1,10 @@
+//
+//  pattern #        type        cycles  loads  observe_proc  capture_proc  capture_clock_sequence
+//  ---------  ----------------  ------  -----  ------------  ------------  ----------------------
+//        0    clock_sequential     3      0         -             -        [clk] [clk] [-]       
+//        1    clock_sequential     3      0         -             -        [clk] [clk] [-]       
+//        2    clock_sequential     3      0         -             -        [clk] [clk] [-]       
+//        3    clock_sequential     2      0         -             -        [clk] [-]             
+//        4    clock_sequential     2      0         -             -        [clk] [-]             
+//        5    clock_sequential     2      0         -             -        [clk] [-]             
+//

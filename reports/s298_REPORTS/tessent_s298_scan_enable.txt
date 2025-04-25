@@ -1,0 +1,13 @@
+Scan mode 'unwrapped' scan enables:
+---------------------------------------------------
+Primary Input  Internal Connection Node  Scan Chain
+---------------------------------------------------
+/scan_en       --                        chain0    
+                                         chain1    
+                                         chain2    
+                                         chain3    
+                                         chain4    
+                                         chain5    
+                                         chain6    
+---------------------------------------------------
+

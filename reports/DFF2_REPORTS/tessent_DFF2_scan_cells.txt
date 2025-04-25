@@ -1,0 +1,9 @@
+Scan mode 'unwrapped' scan cells:
+--------------------------------------------------------------------------------------------
+CellNo  ChainName  GroupName  Pathname               CellName  ScanOut  Clock  ClockPolarity
+--------------------------------------------------------------------------------------------
+-       chain0     dummy      /[lockup-after-chain]  [LAT]              clk    (-)          
+0       chain0     dummy      /q1_reg                DFF_X1    Q        clk    (+)          
+1       chain0     dummy      /Q_reg                 DFF_X1    Q        clk    (+)          
+--------------------------------------------------------------------------------------------
+

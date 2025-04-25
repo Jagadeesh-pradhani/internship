@@ -1,0 +1,36 @@
+#1
+Number of ICG'S
+
+Command:
+```
+grep -B 4 "clock_gating_integrated_cell" slow.lib | grep "cell (" | wc -l
+```
+Output:
+16
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#2
+List of ICG's
+
+Command:
+```
+grep -B 4 clock_gating_integrated_cell slow.lib | grep "cell (" | sed 's/.*(//' | sed 's/).*//' >> Cadence_RAK_ICGs.txt
+```
+Output:
+TLATNCAX12
+TLATNCAX16
+TLATNCAX2
+TLATNCAX20
+TLATNCAX3
+TLATNCAX4
+TLATNCAX6
+TLATNCAX8
+TLATNTSCAX12
+TLATNTSCAX16
+TLATNTSCAX2
+TLATNTSCAX20
+TLATNTSCAX3
+TLATNTSCAX4
+TLATNTSCAX6
+TLATNTSCAX8

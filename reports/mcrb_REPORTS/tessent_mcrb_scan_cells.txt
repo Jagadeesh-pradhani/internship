@@ -1,0 +1,15 @@
+Scan mode 'unwrapped' scan cells:
+--------------------------------------------------------------------------------------------------------
+CellNo  ChainName  GroupName  Pathname                CellName  ScanOut  Clock             ClockPolarity
+--------------------------------------------------------------------------------------------------------
+-       chain0     dummy      /[lockup-after-chain]   [LAT]              mc_rb_ef1_sclk_i  (-)          
+0       chain0     dummy      /skew_addr_cntr_reg[3]  DFFR_X1   Q        mc_rb_ef1_sclk_i  (+)          
+1       chain0     dummy      /skew_addr_cntr_reg[4]  DFFR_X2   Q        mc_rb_ef1_sclk_i  (+)          
+-       chain1     dummy      /[lockup-after-chain]   [LAT]              mc_rb_ef1_sclk_i  (-)          
+0       chain1     dummy      /skew_addr_cntr_reg[1]  DFFR_X2   Q        mc_rb_ef1_sclk_i  (+)          
+1       chain1     dummy      /skew_addr_cntr_reg[0]  DFFR_X2   Q        mc_rb_ef1_sclk_i  (+)          
+-       chain2     dummy      /[lockup-after-chain]   [LAT]              mc_rb_ef1_sclk_i  (-)          
+0       chain2     dummy      /mc_rb_fuse_vld_q_reg   DFFR_X2   Q        mc_rb_ef1_sclk_i  (+)          
+1       chain2     dummy      /skew_addr_cntr_reg[2]  DFFR_X2   Q        mc_rb_ef1_sclk_i  (+)          
+--------------------------------------------------------------------------------------------------------
+

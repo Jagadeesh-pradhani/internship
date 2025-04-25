@@ -1,0 +1,241 @@
+
+    type    code    pin_pathname
+    ----   ------   ------------------------------------
+      0    DS       /mc_rb_ef1_svld_i
+      0    EQ       /g2/C1
+      1    DS       /g2/C1
+      1    EQ       /g2/C2
+      1    EQ       /mc_rb_ef1_svld_i
+      1    EQ       /mc_rb_fuse_vld_q_reg/QN
+      0    DS       /gctl_rclk_orst_n_i
+      1    DS       /gctl_rclk_orst_n_i
+      0    DS       /mc_rb_fuse_vld_q_reg/D
+      0    EQ       /mc_rb_fuse_vld_i
+      1    DS       /mc_rb_fuse_vld_i
+      1    EQ       /mc_rb_fuse_vld_q_reg/D
+      0    DS       /mc_rb_ef1_sclk_i
+      1    DS       /mc_rb_ef1_sclk_i
+      0    DS       "/\skew_addr_cntr_reg[2] /SI"
+      0    EQ       /tessent_persistent_cell_buf_extsi8_i/Z
+      0    EQ       /tessent_persistent_cell_buf_extsi8_i/A
+      0    EQ       /ts_si[2]
+      1    DS       /tessent_persistent_cell_buf_extsi8_i/Z
+      1    EQ       /tessent_persistent_cell_buf_extsi8_i/A
+      1    EQ       /ts_si[2]
+      1    EQ       "/\skew_addr_cntr_reg[2] /SI"
+      0    DS       "/\skew_addr_cntr_reg[0] /SI"
+      0    EQ       /tessent_persistent_cell_buf_extsi7_i/Z
+      0    EQ       /tessent_persistent_cell_buf_extsi7_i/A
+      0    EQ       /ts_si[1]
+      1    DS       /tessent_persistent_cell_buf_extsi7_i/Z
+      1    EQ       /tessent_persistent_cell_buf_extsi7_i/A
+      1    EQ       /ts_si[1]
+      1    EQ       "/\skew_addr_cntr_reg[0] /SI"
+      0    DS       "/\skew_addr_cntr_reg[4] /SI"
+      0    EQ       /tessent_persistent_cell_buf_extsi6_i/Z
+      0    EQ       /tessent_persistent_cell_buf_extsi6_i/A
+      0    EQ       /ts_si[0]
+      1    DS       /tessent_persistent_cell_buf_extsi6_i/Z
+      1    EQ       /tessent_persistent_cell_buf_extsi6_i/A
+      1    EQ       /ts_si[0]
+      1    EQ       "/\skew_addr_cntr_reg[4] /SI"
+      0    DS       /scan_en
+      1    DS       /scan_en
+      0    AU       "/\skew_addr_cntr_reg[4] /QN"
+      0    EQ       /g2/A2
+      1    DS       /g2/A2
+      1    EQ       /g2/A1
+      1    EQ       "/\skew_addr_cntr_reg[4] /QN"
+      0    DS       "/\skew_addr_cntr_reg[4] /Q"
+      1    DS       "/\skew_addr_cntr_reg[4] /Q"
+      0    UU       "/\skew_addr_cntr_reg[3] /QN"
+      1    UU       "/\skew_addr_cntr_reg[3] /QN"
+      0    DS       "/\skew_addr_cntr_reg[3] /Q"
+      1    DS       "/\skew_addr_cntr_reg[3] /Q"
+      0    UU       "/\skew_addr_cntr_reg[0] /QN"
+      1    UU       "/\skew_addr_cntr_reg[0] /QN"
+      0    DS       "/\skew_addr_cntr_reg[0] /Q"
+      1    DS       "/\skew_addr_cntr_reg[0] /Q"
+      0    UU       "/\skew_addr_cntr_reg[1] /QN"
+      1    UU       "/\skew_addr_cntr_reg[1] /QN"
+      0    DS       "/\skew_addr_cntr_reg[1] /Q"
+      1    DS       "/\skew_addr_cntr_reg[1] /Q"
+      0    UU       "/\skew_addr_cntr_reg[2] /QN"
+      1    UU       "/\skew_addr_cntr_reg[2] /QN"
+      0    DS       "/\skew_addr_cntr_reg[2] /Q"
+      1    DS       "/\skew_addr_cntr_reg[2] /Q"
+      0    DS       /mc_rb_fuse_vld_q_reg/QN
+      0    EQ       /g2/C2
+      0    DS       /mc_rb_fuse_vld_q_reg/Q
+      0    EQ       /ts_lockup_latchn_clkc3_intno5_i/D
+      1    DS       /mc_rb_fuse_vld_q_reg/Q
+      1    EQ       /ts_lockup_latchn_clkc3_intno5_i/D
+      0    DS       /mc_rb_fuse_vld_q_reg/RN
+      1    DS       /mc_rb_fuse_vld_q_reg/RN
+      0    DS       "/\skew_addr_cntr_reg[2] /RN"
+      1    DS       "/\skew_addr_cntr_reg[2] /RN"
+      0    DS       "/\skew_addr_cntr_reg[1] /RN"
+      1    DS       "/\skew_addr_cntr_reg[1] /RN"
+      0    DS       "/\skew_addr_cntr_reg[0] /RN"
+      1    DS       "/\skew_addr_cntr_reg[0] /RN"
+      0    DS       "/\skew_addr_cntr_reg[3] /RN"
+      1    DS       "/\skew_addr_cntr_reg[3] /RN"
+      0    DS       "/\skew_addr_cntr_reg[4] /RN"
+      1    DS       "/\skew_addr_cntr_reg[4] /RN"
+      0    AU       /ts_lockup_latchn_clkc3_intno5_i/GN
+      1    DI.CLK   /ts_lockup_latchn_clkc3_intno5_i/GN
+      0    AU       /ts_lockup_latchn_clkc2_intno3_i/GN
+      1    DI.CLK   /ts_lockup_latchn_clkc2_intno3_i/GN
+      0    AU       /ts_lockup_latchn_clkc1_intno1_i/GN
+      1    DI.CLK   /ts_lockup_latchn_clkc1_intno1_i/GN
+      0    DS       /mc_rb_fuse_vld_q_reg/SE
+      1    DS       /mc_rb_fuse_vld_q_reg/SE
+      0    DS       "/\skew_addr_cntr_reg[2] /SE"
+      1    DS       "/\skew_addr_cntr_reg[2] /SE"
+      0    DS       "/\skew_addr_cntr_reg[1] /SE"
+      1    DS       "/\skew_addr_cntr_reg[1] /SE"
+      0    DS       "/\skew_addr_cntr_reg[0] /SE"
+      1    DS       "/\skew_addr_cntr_reg[0] /SE"
+      0    DS       "/\skew_addr_cntr_reg[3] /SE"
+      1    DS       "/\skew_addr_cntr_reg[3] /SE"
+      0    DS       "/\skew_addr_cntr_reg[4] /SE"
+      1    DS       "/\skew_addr_cntr_reg[4] /SE"
+      0    DS       "/\skew_addr_cntr_reg[3] /SI"
+      1    DS       "/\skew_addr_cntr_reg[3] /SI"
+      0    DS       /g423__8246/ZN
+      1    DS       /g423__8246/ZN
+      1    EQ       /g423__8246/A1
+      1    EQ       /g423__8246/A2
+      0    DS       /g423__8246/A1
+      0    DS       /g423__8246/A2
+      0    DS       /g409__4319/B
+      1    DS       /g409__4319/B
+      0    AU       /g419__5122/ZN
+      1    EQ       /g419__5122/A2
+      1    EQ       /g419__5122/A3
+      1    EQ       /g419__5122/A1
+      0    EQ       /g2/B1
+      1    DS       /g2/B1
+      1    EQ       /g2/B2
+      1    EQ       /g419__5122/ZN
+      0    DS       /g419__5122/A2
+      0    DS       /g419__5122/A3
+      0    DS       /g419__5122/A1
+      0    DS       /g420__2802/B
+      1    DS       /g420__2802/B
+      0    DS       "/\skew_addr_cntr_reg[1] /SI"
+      1    DS       "/\skew_addr_cntr_reg[1] /SI"
+      0    DS       /g420__2802/A
+      1    DS       /g420__2802/A
+      0    DS       /mc_rb_fuse_vld_q_reg/SI
+      1    DS       /mc_rb_fuse_vld_q_reg/SI
+      0    DS       /g416__3680/B
+      1    DS       /g416__3680/B
+      0    DS       /g2/A1
+      0    DS       /g2/B2
+      0    DS       /g416__3680/A
+      0    EQ       /g420__2802/CO
+      1    DS       /g416__3680/A
+      1    EQ       /g420__2802/CO
+      0    DS       "/\skew_addr_cntr_reg[1] /D"
+      0    EQ       /g414__5526/ZN
+      0    EQ       /g414__5526/A1
+      0    EQ       /g414__5526/A2
+      0    EQ       /g420__2802/S
+      1    DS       /g420__2802/S
+      1    EQ       /g414__5526/A2
+      0    DS       /g2/ZN
+      1    DS       /g2/ZN
+      0    DS       /g409__4319/A
+      0    EQ       /g416__3680/CO
+      1    DS       /g409__4319/A
+      1    EQ       /g416__3680/CO
+      0    DS       "/\skew_addr_cntr_reg[2] /D"
+      0    EQ       /g415__6783/ZN
+      0    EQ       /g415__6783/A1
+      0    EQ       /g415__6783/A2
+      0    EQ       /g416__3680/S
+      1    DS       /g416__3680/S
+      1    EQ       /g415__6783/A2
+      0    DS       /g417/ZN
+      1    EQ       /g417/A
+      0    EQ       /g413__8428/A1
+      0    DS       "/\skew_addr_cntr_reg[0] /D"
+      0    EQ       /g413__8428/ZN
+      1    EQ       /g413__8428/A1
+      1    EQ       /g413__8428/A2
+      1    EQ       /g417/ZN
+      0    EQ       /g417/A
+      1    DS       /g415__6783/ZN
+      1    EQ       "/\skew_addr_cntr_reg[2] /D"
+      1    DS       /g415__6783/A1
+      1    DS       /g414__5526/ZN
+      1    EQ       "/\skew_addr_cntr_reg[1] /D"
+      1    DS       /g414__5526/A1
+      1    DS       /g413__8428/ZN
+      1    EQ       "/\skew_addr_cntr_reg[0] /D"
+      0    DS       /g413__8428/A2
+      0    DS       /g409__4319/CO
+      0    EQ       /g407__5107/A
+      1    DS       /g409__4319/CO
+      1    EQ       /g407__5107/A
+      0    DS       "/\skew_addr_cntr_reg[3] /D"
+      0    EQ       /g408__6260/ZN
+      0    EQ       /g408__6260/A1
+      0    EQ       /g408__6260/A2
+      0    EQ       /g409__4319/S
+      1    DS       /g409__4319/S
+      1    EQ       /g408__6260/A2
+      0    DS       "/\skew_addr_cntr_reg[4] /D"
+      0    EQ       /g405__2398/ZN
+      0    EQ       /g405__2398/A2
+      0    EQ       /g405__2398/A1
+      0    EQ       /g407__5107/Z
+      1    DS       /g407__5107/Z
+      1    EQ       /g405__2398/A1
+      0    DS       /g407__5107/B
+      1    DS       /g407__5107/B
+      1    DS       /g408__6260/ZN
+      1    EQ       "/\skew_addr_cntr_reg[3] /D"
+      1    DS       /g408__6260/A1
+      1    DS       /g405__2398/ZN
+      1    EQ       "/\skew_addr_cntr_reg[4] /D"
+      1    DS       /g405__2398/A2
+      0    DS       "/\skew_addr_cntr_reg[4] /CK"
+      1    DS       "/\skew_addr_cntr_reg[4] /CK"
+      0    DS       "/\skew_addr_cntr_reg[3] /CK"
+      1    DS       "/\skew_addr_cntr_reg[3] /CK"
+      0    DS       "/\skew_addr_cntr_reg[0] /CK"
+      1    DS       "/\skew_addr_cntr_reg[0] /CK"
+      0    DS       "/\skew_addr_cntr_reg[1] /CK"
+      1    DS       "/\skew_addr_cntr_reg[1] /CK"
+      0    DS       "/\skew_addr_cntr_reg[2] /CK"
+      1    DS       "/\skew_addr_cntr_reg[2] /CK"
+      0    DS       /mc_rb_fuse_vld_q_reg/CK
+      1    DS       /mc_rb_fuse_vld_q_reg/CK
+      0    DS       /ts_so[0]
+      0    EQ       /ts_lockup_latchn_clkc1_intno1_i/Q
+      1    DS       /ts_so[0]
+      1    EQ       /ts_lockup_latchn_clkc1_intno1_i/Q
+      0    DS       /ts_lockup_latchn_clkc1_intno1_i/D
+      1    DS       /ts_lockup_latchn_clkc1_intno1_i/D
+      0    DS       /ts_so[1]
+      0    EQ       /ts_lockup_latchn_clkc2_intno3_i/Q
+      1    DS       /ts_so[1]
+      1    EQ       /ts_lockup_latchn_clkc2_intno3_i/Q
+      0    DS       /ts_lockup_latchn_clkc2_intno3_i/D
+      1    DS       /ts_lockup_latchn_clkc2_intno3_i/D
+      0    DS       /ts_so[2]
+      0    EQ       /ts_lockup_latchn_clkc3_intno5_i/Q
+      1    DS       /ts_so[2]
+      1    EQ       /ts_lockup_latchn_clkc3_intno5_i/Q
+      0    DS       /skew_addr_cntr_o[4]
+      1    DS       /skew_addr_cntr_o[4]
+      0    DS       /skew_addr_cntr_o[3]
+      1    DS       /skew_addr_cntr_o[3]
+      0    DS       /skew_addr_cntr_o[2]
+      1    DS       /skew_addr_cntr_o[2]
+      0    DS       /skew_addr_cntr_o[1]
+      1    DS       /skew_addr_cntr_o[1]
+      0    DS       /skew_addr_cntr_o[0]
+      1    DS       /skew_addr_cntr_o[0]

@@ -1,0 +1,17 @@
+===============================================================================
+name           type       length  si_so_clocks  state   is_non_scannable_reason
+-------------  ---------  ------  ------------  ------  -----------------------
+/DFF_3_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_10_q_reg  leaf_cell  1       +CK           usable  --                     
+/DFF_9_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_6_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_5_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_7_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_4_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_8_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_11_q_reg  leaf_cell  1       +CK           usable  --                     
+/DFF_1_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_2_q_reg   leaf_cell  1       +CK           usable  --                     
+/DFF_13_q_reg  leaf_cell  1       +CK           usable  --                     
+/DFF_12_q_reg  leaf_cell  1       +CK           usable  --                     
+/DFF_0_q_reg   leaf_cell  1       +CK           usable  --                     

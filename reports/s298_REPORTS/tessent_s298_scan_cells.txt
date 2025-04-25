@@ -1,0 +1,27 @@
+Scan mode 'unwrapped' scan cells:
+--------------------------------------------------------------------------------------------
+CellNo  ChainName  GroupName  Pathname               CellName  ScanOut  Clock  ClockPolarity
+--------------------------------------------------------------------------------------------
+-       chain0     dummy      /[lockup-after-chain]  [LAT]              CK     (-)          
+0       chain0     dummy      /DFF_10_q_reg          DFF_X1    Q        CK     (+)          
+1       chain0     dummy      /DFF_3_q_reg           DFF_X2    Q        CK     (+)          
+-       chain1     dummy      /[lockup-after-chain]  [LAT]              CK     (-)          
+0       chain1     dummy      /DFF_6_q_reg           DFF_X1    Q        CK     (+)          
+1       chain1     dummy      /DFF_9_q_reg           DFF_X1    Q        CK     (+)          
+-       chain2     dummy      /[lockup-after-chain]  [LAT]              CK     (-)          
+0       chain2     dummy      /DFF_7_q_reg           DFF_X1    Q        CK     (+)          
+1       chain2     dummy      /DFF_5_q_reg           DFF_X2    Q        CK     (+)          
+-       chain3     dummy      /[lockup-after-chain]  [LAT]              CK     (-)          
+0       chain3     dummy      /DFF_8_q_reg           DFF_X1    Q        CK     (+)          
+1       chain3     dummy      /DFF_4_q_reg           DFF_X2    Q        CK     (+)          
+-       chain4     dummy      /[lockup-after-chain]  [LAT]              CK     (-)          
+0       chain4     dummy      /DFF_1_q_reg           DFF_X2    Q        CK     (+)          
+1       chain4     dummy      /DFF_11_q_reg          DFF_X1    Q        CK     (+)          
+-       chain5     dummy      /[lockup-after-chain]  [LAT]              CK     (-)          
+0       chain5     dummy      /DFF_13_q_reg          DFF_X2    Q        CK     (+)          
+1       chain5     dummy      /DFF_2_q_reg           DFF_X2    Q        CK     (+)          
+-       chain6     dummy      /[lockup-after-chain]  [LAT]              CK     (-)          
+0       chain6     dummy      /DFF_0_q_reg           DFF_X2    Q        CK     (+)          
+1       chain6     dummy      /DFF_12_q_reg          DFF_X2    Q        CK     (+)          
+--------------------------------------------------------------------------------------------
+
