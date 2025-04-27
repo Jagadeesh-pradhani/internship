@@ -1,0 +1,270 @@
+/home/Mentor/tessent/bin/tessent -shell -logfile ../tasks/cpu_sys/Mbist_log -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Fri Apr 25 14:52:21 IST 2025.
+//  64 bit version
+//  Host: APL3.kletech.ac.in (31578 MB RAM, 61034 MB Swap)
+//
+//  command: dofile ../tasks/cpu_sys/scl.do 
+//  command: set_context dft -rtl
+//  command: read_cell_library {../inputs/MDT/slow.atpglib ../inputs/MDT/SPRAM_16x4.atpglib}
+//  Reading DFT Library file ../inputs/MDT/slow.atpglib
+//  Finished reading file ../inputs/MDT/slow.atpglib
+//  Reading DFT Library file ../inputs/MDT/SPRAM_16x4.atpglib
+//  Finished reading file ../inputs/MDT/SPRAM_16x4.atpglib
+//  command: set_design_sources -format tcd_memory -y ../inputs/TCD -extension tcd_mem_lib
+//  command: read_verilog ../../memory/spram/4M1L/SPRAM_16x4/SPRAM_16x4.v -interface_only
+//  command: read_verilog ../inputs/netlist/spram16x4_mbist_opt.v 
+//  command: set_simulation_library_sources -v ../../DFT_LIB/LIB/slow.v
+//  command: set_current_design spram16x4_mbist
+//  Warning: Design module 'SPRAM_16x4' conflicts with a lib model. The module will be ignored.
+//  command: add_black_boxes -auto
+//  command: report_memory_instances 
+//
+// Memory Instance: 'mem_inst'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//  command: set_design_level physical_block
+//  command: set_dft_specification_requirements -memory_test on 
+//  command: add_clocks clk -period 12ns -label clk
+//  command: check_design_rules 
+//  Warning: Rule FN4 violation occurs 13 times
+//  Flattening process completed, cell instances=72, gates=143, PIs=3, POs=2, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  command: set spec [create_dft_specification]
+//  sub-command: create_dft_specification 
+//  
+//  Begin creation of DftSpecification(spram16x4_mbist,rtl)
+//    Creation of RtlCells wrapper
+//    Creation of IjtagNetwork wrapper
+//    Creation of MemoryBist wrapper
+//    Creation of MemoryBisr wrapper
+//  
+//  Done  creation of DftSpecification(spram16x4_mbist,rtl)
+//  
+//  command: report_config_data $spec
+
+DftSpecification(spram16x4_mbist,rtl) {
+  IjtagNetwork {
+    HostScanInterface(ijtag) {
+      Sib(sti) {
+        Attributes {
+          tessent_dft_function : scan_tested_instrument_host;
+        }
+        Sib(mbist) {
+        }
+      }
+    }
+  }
+  MemoryBist {
+    ijtag_host_interface : Sib(mbist);
+    Controller(c1) {
+      clock_domain_label : clk;
+      Step {
+        MemoryInterface(m1) {
+          instance_name : mem_inst;
+          output_enable_control : system;
+        }
+      }
+    }
+  }
+}
+//  command: process_dft_specification 
+//  
+//  Begin processing of /DftSpecification(spram16x4_mbist,rtl)
+//    --- IP generation phase ---
+//    Validation of IjtagNetwork
+//    Validation of MemoryBist
+//    Processing of RtlCells
+//      Generating Verilog RTL Cells
+//        Verilog RTL : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_cells.instrument/spram16x4_mbist_rtl_tessent_clk_buf.v
+//        Verilog RTL : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_cells.instrument/spram16x4_mbist_rtl_tessent_clk_inv.v
+//        Verilog RTL : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_cells.instrument/spram16x4_mbist_rtl_tessent_clk_mux2.v
+//        Verilog RTL : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_cells.instrument/spram16x4_mbist_rtl_tessent_posedge_synchronizer_reset.v
+//
+//      Loading the generated RTL verilog files (2) to enable instantiating the contained modules
+//      into the design.
+//
+//      Loading the generated structural verilog files (2) to enable instantiating the contained modules
+//      into the design.
+//    Processing of IjtagNetwork
+//      Generating design files for IJTAG SIB module spram16x4_mbist_rtl_tessent_sib_1
+//        Verilog RTL : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_ijtag.instrument/spram16x4_mbist_rtl_tessent_sib_1.v
+//        IJTAG ICL   : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_ijtag.instrument/spram16x4_mbist_rtl_tessent_sib_1.icl
+//        TCD Scan    : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_ijtag.instrument/spram16x4_mbist_rtl_tessent_sib_1.tcd_scan
+//        CTL         : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_ijtag.instrument/spram16x4_mbist_rtl_tessent_sib_1.ctl
+//        TCD         : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_ijtag.instrument/spram16x4_mbist_rtl_tessent_sib_1.tcd
+//        PDL         : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_ijtag.instrument/spram16x4_mbist_rtl_tessent_sib_1.pdl
+//      Generating design files for IJTAG SIB module spram16x4_mbist_rtl_tessent_sib_2
+//        Verilog RTL : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_ijtag.instrument/spram16x4_mbist_rtl_tessent_sib_2.v
+//        IJTAG ICL   : ./tsdb_outdir/instruments/spram16x4_mbist_rtl_ijtag.instrument/spram16x4_mbist_rtl_tessent_sib_2.icl
+//
+//      Loading the generated RTL verilog files (2) to enable instantiating the contained modules
+//      into the design.
+//    Processing of MemoryBist
+//      Generating the IJTAG ICL for the memories.
+//      Generating design files for MemoryBist Controller(c1)
+//  Warning: There are warnings issued while generating design files for MemoryBist controller(s).
+//           Review the messages in the following generation log files:
+//           ./tsdb_outdir/instruments/spram16x4_mbist_rtl_mbist.instrument/spram16x4_mbist_rtl_tessent_mbist_c1.generation_log
+//      Generating design files for Bist Access Port
+//
+//      Loading the generated RTL verilog files (3) to enable instantiating the contained modules
+//      into the design.
+//      Generating design files for MemoryBist controller assembly
+//    --- Instrument insertion phase ---
+//   Inserting instruments of type 'ijtag'
+//   Inserting instruments of type 'memory_bist'
+//  
+//    Writing out modified source design in ./tsdb_outdir/dft_inserted_designs/spram16x4_mbist_rtl.dft_inserted_design
+//    Writing out specification in ./tsdb_outdir/dft_inserted_designs/spram16x4_mbist_rtl.dft_spec
+//  
+//  Done  processing of DftSpecification(spram16x4_mbist,rtl)
+//  
+//  command: extract_icl 
+//  Note: Updating the hierarchical data model to reflect RTL design changes.
+//  Warning: Design module 'SPRAM_16x4' conflicts with a lib model. The module will be ignored.
+//  Writing design source dictionary : ./tsdb_outdir/dft_inserted_designs/spram16x4_mbist_rtl.dft_inserted_design/spram16x4_mbist.design_source_dictionary
+//  Warning: Rule FN1 violation occurs 533 times
+//  Warning: Rule FN4 violation occurs 17 times
+//  Warning: Rule FP13 violation occurs 10 times
+//  Flattening process completed, cell instances=133, gates=383, PIs=10, POs=3, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin ICL extraction.
+//  ---------------------
+//  ICL extraction completed, ICL instances=6, CPU time=0.03 sec.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin ICL elaboration and checking.
+//  -----------------------------------
+//  ICL elaboration completed, CPU time=0.02 sec.
+//  ---------------------------------------------------------------------------
+//  Writing ICL file : ./tsdb_outdir/dft_inserted_designs/spram16x4_mbist_rtl.dft_inserted_design/spram16x4_mbist.icl
+//  Writing consolidated PDL file: ./tsdb_outdir/dft_inserted_designs/spram16x4_mbist_rtl.dft_inserted_design/spram16x4_mbist.pdl
+//  Extracting SDC...
+//  Writing SDC file: ./tsdb_outdir/dft_inserted_designs/spram16x4_mbist_rtl.dft_inserted_design/spram16x4_mbist.sdc
+//  Writing DFT info dictionary: ./tsdb_outdir/dft_inserted_designs/spram16x4_mbist_rtl.dft_inserted_design/spram16x4_mbist.dft_info_dictionary
+//  Writing IJTAG graybox files in directory: ./tsdb_outdir/dft_inserted_designs/spram16x4_mbist_rtl.dft_inserted_design/ijtag_graybox
+//  Warning: Design module 'SPRAM_16x4' conflicts with a lib model. The module will be ignored.
+//  command: set spec [create_patterns_specification -replace]
+//  sub-command: create_patterns_specification -replace 
+//  Creating '/PatternsSpecification(spram16x4_mbist,rtl,signoff)'
+//    Getting patterns specifications for the 'ijtag' instrument type
+//    Getting patterns specifications for the 'memory_bist' instrument type
+//  command: report_config_data $spec
+
+PatternsSpecification(spram16x4_mbist,rtl,signoff) {
+  Patterns(ICLNetwork) {
+    ICLNetworkVerify(spram16x4_mbist) {
+    }
+  }
+  Patterns(MemoryBist_P1) {
+    ClockPeriods {
+      clk : 12.0ns;
+    }
+    TestStep(go_nogo) {
+      MemoryBist {
+        run_mode : run_time_prog;
+        reduced_address_count : on;
+        Controller(spram16x4_mbist_rtl_tessent_mbist_c1_controller_inst) {
+          DiagnosisOptions {
+            compare_go : on;
+            compare_go_id : on;
+          }
+        }
+      }
+    }
+  }
+  Patterns(MemoryBist_ParallelRetentionTest_P1) {
+    ClockPeriods {
+      clk : 12.0ns;
+    }
+    TestStep(ParallelRetentionTest) {
+      MemoryBist {
+        run_mode : hw_default;
+        parallel_retention_time : 0;
+        reduced_address_count : on;
+        Controller(spram16x4_mbist_rtl_tessent_mbist_c1_controller_inst) {
+          parallel_retention_group : 1;
+          DiagnosisOptions {
+            compare_go_id : on;
+          }
+        }
+      }
+    }
+  }
+}
+//  command: process_patterns_specification 
+//  
+//  Begin processing of /PatternsSpecification(spram16x4_mbist,rtl,signoff)
+//  
+//    Processing of /PatternsSpecification(spram16x4_mbist,rtl,signoff)/Patterns(ICLNetwork)
+//  
+//      Creation of pattern 'ICLNetwork'
+//        Solving ICLNetworkVerify(spram16x4_mbist)
+//  
+//      Writing pattern file './tsdb_outdir/patterns/spram16x4_mbist_rtl.patterns_signoff/ICLNetwork.v'
+//  
+//    Processing of /PatternsSpecification(spram16x4_mbist,rtl,signoff)/Patterns(MemoryBist_P1)
+//      Processing of TestStep(go_nogo) instrument 'memory_bist'
+//  
+//      Creation of pattern 'MemoryBist_P1'
+//        Solving TestStep(go_nogo)
+//  
+//      Writing pattern file './tsdb_outdir/patterns/spram16x4_mbist_rtl.patterns_signoff/MemoryBist_P1.v'
+//  
+//    Processing of /PatternsSpecification(spram16x4_mbist,rtl,signoff)/Patterns(MemoryBist_ParallelRetentionTest_P1)
+//      Processing of TestStep(ParallelRetentionTest) instrument 'memory_bist'
+//  
+//      Creation of pattern 'MemoryBist_ParallelRetentionTest_P1'
+//        Solving TestStep(ParallelRetentionTest)
+//  
+//      Writing pattern file './tsdb_outdir/patterns/spram16x4_mbist_rtl.patterns_signoff/MemoryBist_ParallelRetentionTest_P1.v'
+//      Writing simulation data dictionary file './tsdb_outdir/patterns/spram16x4_mbist_rtl.patterns_signoff/simulation.data_dictionary'
+//  
+//  Done  processing of /PatternsSpecification(spram16x4_mbist,rtl,signoff)
+//  
+//  Writing configuration data file './tsdb_outdir/patterns/spram16x4_mbist_rtl.patterns_spec_signoff'.
+//  command: set_testbench_simulation_options -parallel_simulations maxcpu
+//  command: run_testbench_simulations -simulator Questa
+Starting 3 simulations for ./simulation_outdir/spram16x4_mbist_rtl.simulation_signoff
+//  Waiting for the simulation(s) to complete
+
+unscheduled 0 queued 0 running 0 pass 3 fail 0
+//  command: check_testbench_simulations -report_status
+
+// Simulation status for ./simulation_outdir/spram16x4_mbist_rtl.simulation_signoff
+// ================================================================================
+// -----------------------------------  ------  -----------  -----------  ----------------------------
+// Pattern Name                         Status  Unexpected   Missing      Date
+//                                              Miscompares  Miscompares
+// -----------------------------------  ------  -----------  -----------  ----------------------------
+// ICLNetwork                           pass           0            0     Fri Apr 25 14:47:18 IST 2025
+// MemoryBist_P1                        pass           0            0     Fri Apr 25 14:47:18 IST 2025
+// MemoryBist_ParallelRetentionTest_P1  pass           0            0     Fri Apr 25 14:47:18 IST 2025
+//
+//  command: exit 
